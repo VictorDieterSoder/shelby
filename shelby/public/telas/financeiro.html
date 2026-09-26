@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Financeiro - Cantina</title>
+
+    <link rel="stylesheet" href="../css/financeiro.css">
+
+    <link rel="stylesheet" href="../css/conexao.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/telas.js"></script>
+</head>
+
+<body>
+
+    <div class="sistema">
+
+
+        <!-- MENU -->
+
+        <aside class="menu">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+                    <h2>Cantina</h2>
+                    <p>Gestão</p>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="painel.html" class="menu-item">
+                    <span>▦</span>
+                    Painel
+                </a>
+
+                <a href="pedidos-balcao.html" class="menu-item">
+                    <span></span>
+                    Pedidos no Balcão
+                </a>
+
+                <a href="cadastro-itens.html" class="menu-item">
+                    <span></span>
+                    Cadastro de Itens
+                </a>
+
+                <a href="itens-dia.html" class="menu-item">
+                    <span>✓</span>
+                    Itens do Dia
+                </a>
+
+                <a href="pedidos-intervalo.html" class="menu-item">
+                    <span></span>
+                    Pedidos do Intervalo
+                </a>
+
+                <a href="financeiro.html" class="menu-item ativo">
+                    <span></span>
+                    Financeiro
+                </a>
+
+                <a href="financeiro-aluno.html" class="menu-item">
+                    <span></span>
+                    Financeiro por Aluno
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a href="index.html" class="menu-item sair">
+                    <span></span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+
+            <!-- TOPO -->
+
+            <div class="topo">
+
+                <div>
+
+                    <p>Financeiro</p>
+
+                    <h1>Controle financeiro</h1>
+
+                    <span>
+                        Acompanhe o faturamento e as movimentações da cantina.
+                    </span>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>Hoje</span>
+
+                    <strong>
+                        25/09/2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- VALOR TOTAL -->
+
+            <section class="card financeiro-card">
+
+                <div class="cabecalho-card">
+
+                    <div>
+
+                        <h2>
+                            Valor total
+                        </h2>
+
+                        <p>
+                            Faturamento total no período selecionado.
+                        </p>
+
+                    </div>
+
+
+                    <select class="periodo">
+
+                        <option>
+                            1 dia
+                        </option>
+
+                        <option>
+                            1 semana
+                        </option>
+
+                        <option selected>
+                            1 mês
+                        </option>
+
+                        <option>
+                            3 meses
+                        </option>
+
+                        <option>
+                            6 meses
+                        </option>
+
+                        <option>
+                            1 ano
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="valor-principal">
+
+                    <span>
+                        Faturamento
+                    </span>
+
+                    <strong>
+                        R$ 12.485,00
+                    </strong>
+
+                </div>
+
+
+                <div class="comparacao">
+
+                    <span class="positivo">
+                        ↑ 8,4%
+                    </span>
+
+                    em relação ao período anterior
+
+                </div>
+
+            </section>
+
+
+            <!-- VALOR POR ITEM -->
+
+            <section class="card financeiro-card">
+
+                <div class="cabecalho-card">
+
+                    <div>
+
+                        <h2>
+                            Valor por item
+                        </h2>
+
+                        <p>
+                            Faturamento gerado por cada produto.
+                        </p>
+
+                    </div>
+
+
+                    <select class="periodo">
+
+                        <option>
+                            1 dia
+                        </option>
+
+                        <option>
+                            1 semana
+                        </option>
+
+                        <option selected>
+                            1 mês
+                        </option>
+
+                        <option>
+                            3 meses
+                        </option>
+
+                        <option>
+                            6 meses
+                        </option>
+
+                        <option>
+                            1 ano
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="itens-financeiro">
+
+
+                    <div class="linha-item">
+
+                        <div class="item-nome">
+
+                            <span class="icone-item">
+                                
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Cachorro-quente
+                                </strong>
+
+                                <small>
+                                    245 pedidos
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="barra-valor">
+
+                            <div
+                                class="barra"
+                                style="width: 85%;">
+                            </div>
+
+                        </div>
+
+
+                        <strong class="valor-item">
+                            R$ 1.960,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="linha-item">
+
+                        <div class="item-nome">
+
+                            <span class="icone-item">
+                                
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Pastel
+                                </strong>
+
+                                <small>
+                                    190 pedidos
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="barra-valor">
+
+                            <div
+                                class="barra"
+                                style="width: 70%;">
+                            </div>
+
+                        </div>
+
+
+                        <strong class="valor-item">
+                            R$ 1.140,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="linha-item">
+
+                        <div class="item-nome">
+
+                            <span class="icone-item">
+                                
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Refrigerante
+                                </strong>
+
+                                <small>
+                                    170 pedidos
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="barra-valor">
+
+                            <div
+                                class="barra"
+                                style="width: 55%;">
+                            </div>
+
+                        </div>
+
+
+                        <strong class="valor-item">
+                            R$ 850,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="linha-item">
+
+                        <div class="item-nome">
+
+                            <span class="icone-item">
+                                
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Suco
+                                </strong>
+
+                                <small>
+                                    150 pedidos
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="barra-valor">
+
+                            <div
+                                class="barra"
+                                style="width: 48%;">
+                            </div>
+
+                        </div>
+
+
+                        <strong class="valor-item">
+                            R$ 750,00
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- EXTRATOS -->
+
+            <div class="extratos">
+
+
+                <!-- EXTRATO GERAL -->
+
+                <section class="card extrato-card">
+
+                    <div class="cabecalho-card">
+
+                        <div>
+
+                            <h2>
+                                Extrato geral
+                            </h2>
+
+                            <p>
+                                Todas as movimentações.
+                            </p>
+
+                        </div>
+
+
+                        <select class="periodo">
+
+                            <option>
+                                1 dia
+                            </option>
+
+                            <option>
+                                1 semana
+                            </option>
+
+                            <option selected>
+                                1 mês
+                            </option>
+
+                            <option>
+                                3 meses
+                            </option>
+
+                            <option>
+                                6 meses
+                            </option>
+
+                            <option>
+                                1 ano
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="extrato-resumo">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong>
+                            R$ 12.485,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="movimentos">
+
+
+                        <div class="movimento">
+
+                            <div>
+
+                                <strong>
+                                    João da Silva
+                                </strong>
+
+                                <span>
+                                    Cachorro-quente
+                                </span>
+
+                            </div>
+
+                            <strong class="entrada">
+                                + R$ 8,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="movimento">
+
+                            <div>
+
+                                <strong>
+                                    Maria Silva
+                                </strong>
+
+                                <span>
+                                    Pastel
+                                </span>
+
+                            </div>
+
+                            <strong class="entrada">
+                                + R$ 6,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="movimento">
+
+                            <div>
+
+                                <strong>
+                                    Pedro Rodrigues
+                                </strong>
+
+                                <span>
+                                    Refrigerante
+                                </span>
+
+                            </div>
+
+                            <strong class="pendente-valor">
+                                R$ 5,00
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a href="extrato-geral.html" class="ver-tudo">
+                        Ver extrato completo →
+                    </a>
+
+                </section>
+
+
+                <!-- EXTRATO SEM INADIMPLÊNCIA -->
+
+                <section class="card extrato-card">
+
+                    <div class="cabecalho-card">
+
+                        <div>
+
+                            <h2>
+                                Extrato sem inadimplência
+                            </h2>
+
+                            <p>
+                                Valores efetivamente recebidos.
+                            </p>
+
+                        </div>
+
+
+                        <select class="periodo">
+
+                            <option>
+                                1 dia
+                            </option>
+
+                            <option>
+                                1 semana
+                            </option>
+
+                            <option selected>
+                                1 mês
+                            </option>
+
+                            <option>
+                                3 meses
+                            </option>
+
+                            <option>
+                                6 meses
+                            </option>
+
+                            <option>
+                                1 ano
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="extrato-resumo recebido">
+
+                        <span>
+                            Total recebido
+                        </span>
+
+                        <strong>
+                            R$ 11.820,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="diferenca">
+
+                        <span>
+                            Inadimplência no período
+                        </span>
+
+                        <strong>
+                            R$ 665,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="movimentos">
+
+
+                        <div class="movimento">
+
+                            <div>
+
+                                <strong>
+                                    João da Silva
+                                </strong>
+
+                                <span>
+                                    PIX
+                                </span>
+
+                            </div>
+
+                            <strong class="entrada">
+                                + R$ 8,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="movimento">
+
+                            <div>
+
+                                <strong>
+                                    Maria Silva
+                                </strong>
+
+                                <span>
+                                    Cartão
+                                </span>
+
+                            </div>
+
+                            <strong class="entrada">
+                                + R$ 6,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="movimento">
+
+                            <div>
+
+                                <strong>
+                                    Ana Costa
+                                </strong>
+
+                                <span>
+                                    Dinheiro
+                                </span>
+
+                            </div>
+
+                            <strong class="entrada">
+                                + R$ 5,00
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a href="extrato-recebidos.html" class="ver-tudo">
+                        Ver extrato completo →
+                    </a>
+
+                </section>
+
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

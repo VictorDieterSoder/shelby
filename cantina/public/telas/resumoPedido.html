@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Confirmar Pedido</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/resumoPedido.css"
+    >
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/usuarios.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TOPO -->
+        <header class="topo">
+
+            <button
+                class="voltar"
+                onclick="window.location.href='painelAluno.html'"
+            >
+                ←
+            </button>
+
+            <div>
+                <h1>Confirmar pedido</h1>
+
+                <p>
+                    Confira os itens antes de comprar
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- ITENS DO PEDIDO -->
+        <section class="card">
+
+            <h2>Itens do pedido</h2>
+
+            <div id="listaPedido"></div>
+
+        </section>
+
+
+        <!-- RETIRADA -->
+        <section class="card">
+
+            <h2>Retirada</h2>
+
+            <div class="campo">
+                <label for="dataRetirada">Data da retirada</label>
+                <input type="date" id="dataRetirada" required>
+            </div>
+
+            <div class="campo">
+                <label for="horaRetirada">Intervalo</label>
+                <select id="horaRetirada" required>
+                    <option value="" selected disabled>Selecione o intervalo</option>
+                    <option value="09:00">09:00 — encomendas até 08:45</option>
+                    <option value="15:30">15:30 — encomendas até 15:15</option>
+                </select>
+                <p class="aviso-intervalo" id="avisoIntervalo" role="status">Pedidos disponíveis somente para hoje.</p>
+            </div>
+
+        </section>
+
+
+        <!-- VALORES -->
+        <section class="card valores">
+
+            <div class="linha">
+
+                <span>
+                    Saldo disponível
+                </span>
+
+                <strong
+                    id="saldo"
+                    class="saldo"
+                >
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <div class="linha total">
+
+                <span>
+                    Valor do pedido
+                </span>
+
+                <strong id="valorTotal">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <div class="linha saldo-restante">
+
+                <span>
+                    Saldo após a compra
+                </span>
+
+                <strong id="saldoDepois">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPRAR -->
+        <button
+            class="btn-comprar"
+            onclick="comprar()"
+        >
+            Comprar
+        </button>
+
+    </main>
+
+
+    
+
+</body>
+</html>

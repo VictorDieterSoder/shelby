@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Responsável</title>
+
+    <link rel="stylesheet" href="../css/loginResp.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/usuarios.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Área do Responsável</h1>
+        <p>Preencha os dados para entrar</p>
+
+        <form method="post">
+
+            <div class="campo">
+                <label for="responsavel">Nome do responsável</label>
+
+                <input
+                    type="text"
+                    id="responsavel"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="aluno">Nome do aluno</label>
+
+                <input
+                    type="text"
+                    id="aluno"
+                    placeholder="Digite o nome do aluno"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+
+            <button type="submit">
+                Entrar
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

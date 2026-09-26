@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área do Responsável</title>
+
+    <link rel="stylesheet" href="../css/painelResp.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/usuarios.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="topo">
+            <div>
+                <span class="bem-vindo">Bem-vindo</span>
+                <h1>Área do Responsável</h1>
+            </div>
+
+            <button class="btn-sair" onclick="window.location.href='../index.html'">
+                Sair
+            </button>
+        </header>
+
+
+        <!-- SALDO TOTAL -->
+
+        <section class="saldo-total">
+
+            <span>Saldo total</span>
+
+            <h2 id="saldoTotal">
+                R$ 500,00
+            </h2>
+
+            <button class="btn-saldo" onclick="adicionarSaldoTotal()">
+                + Adicionar saldo
+            </button>
+
+        </section>
+
+
+        <!-- ESCOLHER FILHO -->
+
+        <section class="card">
+
+            <h2>Selecionar aluno</h2>
+
+            <label for="filho">
+                Filho
+            </label>
+
+            <select id="filho" onchange="trocarFilho()">
+                <option value="joao">João Silva</option>
+                <option value="maria">Maria Silva</option>
+            </select>
+
+        </section>
+
+
+        <!-- SALDO DO FILHO -->
+
+        <section class="card aluno-card">
+
+            <div class="titulo-saldo">
+
+                <div>
+                    <span>Saldo do aluno</span>
+
+                    <h2 id="nomeAluno">
+                        João Silva
+                    </h2>
+                </div>
+
+                <strong id="saldoFilho">
+                    R$ 120,00
+                </strong>
+
+            </div>
+
+
+            <div class="limite-info">
+
+                <span>Limite de gasto</span>
+
+                <strong id="limiteFilho">
+                    R$ 50,00
+                </strong>
+
+            </div>
+
+
+            <div class="acoes">
+
+                <button onclick="adicionarSaldoFilho()">
+                    + Adicionar saldo
+                </button>
+
+                <button
+                    class="btn-secundario"
+                    onclick="definirLimite()"
+                >
+                    Definir limite
+                </button>
+
+                <button class="btn-editar-perfil" type="button" onclick="editarPerfilAluno()">
+                    Editar perfil do aluno
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXTRATO -->
+
+        <section class="card extrato">
+
+            <div class="titulo-extrato">
+                <h2>Extrato</h2>
+
+                <span>Últimas movimentações</span>
+            </div>
+
+
+            <div id="listaExtrato">
+
+                <div class="movimentacao">
+
+                    <div>
+                        <strong>Saldo adicionado</strong>
+                        <span>João Silva • Hoje</span>
+                    </div>
+
+                    <strong class="entrada">
+                        + R$ 50,00
+                    </strong>
+
+                </div>
+
+
+                <div class="movimentacao">
+
+                    <div>
+                        <strong>Lanche</strong>
+                        <span>João Silva • Hoje</span>
+                    </div>
+
+                    <strong class="saida">
+                        - R$ 12,50
+                    </strong>
+
+                </div>
+
+
+                <div class="movimentacao">
+
+                    <div>
+                        <strong>Almoço</strong>
+                        <span>Maria Silva • Ontem</span>
+                    </div>
+
+                    <strong class="saida">
+                        - R$ 18,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <dialog class="dialog-editar-perfil" id="dialogEditarPerfil" aria-labelledby="tituloEditarPerfil">
+            <form id="formEditarPerfil">
+                <div class="dialog-topo">
+                    <h2 id="tituloEditarPerfil">Editar perfil do aluno</h2>
+                    <button class="dialog-fechar" type="button" onclick="fecharEdicaoPerfil()" aria-label="Fechar">×</button>
+                </div>
+                <label for="perfilNome">Nome</label>
+                <input id="perfilNome" name="nome" type="text" maxlength="120" required>
+                <label for="perfilLogin">Usuário de acesso</label>
+                <input id="perfilLogin" name="login" type="text" minlength="3" maxlength="60" pattern="[a-zA-Z0-9._-]+" required>
+                <label for="perfilEmail">E-mail</label>
+                <input id="perfilEmail" name="email" type="email" maxlength="254" required>
+                <div class="dialog-campos-duplos">
+                    <div>
+                        <label for="perfilTurma">Turma</label>
+                        <input id="perfilTurma" name="turma" type="text" maxlength="40" required>
+                    </div>
+                    <div>
+                        <label for="perfilIdade">Idade</label>
+                        <input id="perfilIdade" name="idade" type="number" min="11" max="18" required>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Alergias</legend>
+                    <div id="alergiasPerfil" class="alergias-perfil"></div>
+                </fieldset>
+                <label for="perfilSenha">Nova senha (opcional)</label>
+                <input id="perfilSenha" name="senha" type="password" minlength="8" maxlength="72" autocomplete="new-password">
+                <label for="perfilConfirmarSenha">Confirme a nova senha</label>
+                <input id="perfilConfirmarSenha" name="confirmar_senha" type="password" maxlength="72" autocomplete="new-password">
+                <div class="dialog-acoes">
+                    <button type="button" class="btn-cancelar" onclick="fecharEdicaoPerfil()">Cancelar</button>
+                    <button type="submit" class="btn-salvar-perfil">Salvar alterações</button>
+                </div>
+            </form>
+        </dialog>
+
+    </main>
+
+
+    
+
+</body>
+</html>

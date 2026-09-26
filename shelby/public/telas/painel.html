@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel - Cantina</title>
+
+    <link rel="stylesheet" href="../css/painel.css">
+    <link rel="stylesheet" href="../css/conexao.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/telas.js"></script>
+</head>
+
+<body>
+
+    <div class="sistema">
+
+        <!-- MENU LATERAL -->
+
+        <aside class="menu">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+                    <h2>Cantina</h2>
+                    <p>Gestão</p>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="painel.html" class="menu-item ativo">
+                    <span>▦</span>
+                    <span>Painel</span>
+                </a>
+
+                <a href="pedidos-balcao.html" class="menu-item">
+                    <span></span>
+                    <span>Pedidos no Balcão</span>
+                </a>
+
+                <a href="cadastro-itens.html" class="menu-item">
+                    <span></span>
+                    <span>Cadastro de Itens</span>
+                </a>
+
+                <a href="itens-dia.html" class="menu-item">
+                    <span>✓</span>
+                    <span>Itens do Dia</span>
+                </a>
+
+                <a href="pedidos-intervalo.html" class="menu-item">
+                    <span></span>
+                    <span>Pedidos do Intervalo</span>
+                </a>
+
+                <a href="financeiro.html" class="menu-item">
+                    <span></span>
+                    <span>Financeiro</span>
+                </a>
+
+                <a href="financeiro-aluno.html" class="menu-item">
+                    <span></span>
+                    <span>Financeiro por Aluno</span>
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a href="index.html" class="menu-item sair">
+                    <span></span>
+                    <span>Sair</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <main class="conteudo">
+
+            <!-- CABEÇALHO -->
+
+            <header class="cabecalho">
+
+                <div>
+                    <p class="subtitulo">Painel administrativo</p>
+
+                    <h1>Olá, seja bem-vindo! </h1>
+
+                    <p class="descricao">
+                        Confira os principais dados da cantina neste mês.
+                    </p>
+                </div>
+
+
+                <div class="usuario">
+
+                    <div class="usuario-icon">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <p>Gestor da Cantina</p>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- INDICADORES -->
+
+            <section class="indicadores">
+
+                <div class="card indicador">
+
+                    <div class="indicador-topo">
+
+                        <div class="icone azul">
+                            
+                        </div>
+
+                        <span class="periodo">
+                            Este mês
+                        </span>
+
+                    </div>
+
+                    <p>Total de faturamento</p>
+
+                    <h2>R$ 18.450,00</h2>
+
+                    <span class="crescimento">
+                        ↑ 12,5% em relação ao mês anterior
+                    </span>
+
+                </div>
+
+
+                <div class="card indicador">
+
+                    <div class="indicador-topo">
+
+                        <div class="icone roxo">
+                            
+                        </div>
+
+                        <span class="periodo">
+                            Este mês
+                        </span>
+
+                    </div>
+
+                    <p>Total de pedidos</p>
+
+                    <h2>1.248</h2>
+
+                    <span class="crescimento">
+                        ↑ 8,3% em relação ao mês anterior
+                    </span>
+
+                </div>
+
+
+                <div class="card indicador">
+
+                    <div class="indicador-topo">
+
+                        <div class="icone verde">
+                            
+                        </div>
+
+                        <span class="periodo">
+                            Atualmente
+                        </span>
+
+                    </div>
+
+                    <p>Alunos ativos</p>
+
+                    <h2>486</h2>
+
+                    <span class="informacao">
+                        Alunos cadastrados e ativos
+                    </span>
+
+                </div>
+
+
+                <div class="card indicador">
+
+                    <div class="indicador-topo">
+
+                        <div class="icone vermelho">
+                            
+                        </div>
+
+                        <span class="periodo">
+                            Total
+                        </span>
+
+                    </div>
+
+                    <p>Inadimplência dos alunos</p>
+
+                    <h2>R$ 2.340,00</h2>
+
+                    <span class="alerta">
+                        27 alunos com pendências
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ÁREA DOS GRÁFICOS -->
+
+            <section class="graficos">
+
+                <!-- GRÁFICO DE ITENS -->
+
+                <div class="card grafico-card">
+
+                    <div class="card-cabecalho">
+
+                        <div>
+                            <h2>Itens mais vendidos</h2>
+
+                            <p>
+                                Produtos vendidos neste mês
+                            </p>
+                        </div>
+
+                        <select>
+                            <option>Este mês</option>
+                            <option>Mês anterior</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="grafico-area">
+
+                        <div class="pizza">
+
+                            <div class="pizza-centro">
+
+                                <strong>1.248</strong>
+
+                                <span>pedidos</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="legenda">
+
+                            <div class="legenda-item">
+
+                                <span class="bolinha azul-bolinha"></span>
+
+                                <div>
+                                    <strong>Cachorro-quente</strong>
+                                    <p>32% — 399 vendidos</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="legenda-item">
+
+                                <span class="bolinha amarelo-bolinha"></span>
+
+                                <div>
+                                    <strong>Pastel</strong>
+                                    <p>24% — 299 vendidos</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="legenda-item">
+
+                                <span class="bolinha verde-bolinha"></span>
+
+                                <div>
+                                    <strong>Refrigerante</strong>
+                                    <p>18% — 225 vendidos</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="legenda-item">
+
+                                <span class="bolinha vermelho-bolinha"></span>
+
+                                <div>
+                                    <strong>Salgados</strong>
+                                    <p>15% — 187 vendidos</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="legenda-item">
+
+                                <span class="bolinha roxo-bolinha"></span>
+
+                                <div>
+                                    <strong>Outros</strong>
+                                    <p>11% — 138 vendidos</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESUMO -->
+
+                <div class="card resumo-card">
+
+                    <div class="card-cabecalho">
+
+                        <div>
+                            <h2>Resumo do mês</h2>
+
+                            <p>
+                                Situação atual da cantina
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumo-item">
+
+                        <div class="resumo-icone azul">
+                            
+                        </div>
+
+                        <div>
+                            <p>Ticket médio</p>
+                            <strong>R$ 14,78</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumo-item">
+
+                        <div class="resumo-icone verde">
+                            
+                        </div>
+
+                        <div>
+                            <p>Alunos com pedidos</p>
+                            <strong>372 alunos</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumo-item">
+
+                        <div class="resumo-icone amarelo">
+                            
+                        </div>
+
+                        <div>
+                            <p>Item mais vendido</p>
+                            <strong>Cachorro-quente</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumo-item">
+
+                        <div class="resumo-icone vermelho">
+                            
+                        </div>
+
+                        <div>
+                            <p>Alunos inadimplentes</p>
+                            <strong>27 alunos</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PEDIDOS RECENTES -->
+
+            <section class="card pedidos">
+
+                <div class="card-cabecalho">
+
+                    <div>
+                        <h2>Pedidos recentes</h2>
+
+                        <p>
+                            Últimos pedidos realizados na cantina
+                        </p>
+                    </div>
+
+                    <a href="pedidos-balcao.html">
+                        Ver todos →
+                    </a>
+
+                </div>
+
+
+                <div class="tabela-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Pedido</th>
+                                <th>Valor</th>
+                                <th>Horário</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    João Silva
+                                </td>
+
+                                <td>
+                                    1x Cachorro-quente
+                                </td>
+
+                                <td>
+                                    R$ 8,00
+                                </td>
+
+                                <td>
+                                    10:42
+                                </td>
+
+                                <td>
+                                    <span class="status concluido">
+                                        Concluído
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Maria Souza
+                                </td>
+
+                                <td>
+                                    1x Pastel + 1x Suco
+                                </td>
+
+                                <td>
+                                    R$ 12,00
+                                </td>
+
+                                <td>
+                                    10:38
+                                </td>
+
+                                <td>
+                                    <span class="status pendente">
+                                        Pendente
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Pedro Santos
+                                </td>
+
+                                <td>
+                                    2x Salgado
+                                </td>
+
+                                <td>
+                                    R$ 10,00
+                                </td>
+
+                                <td>
+                                    10:31
+                                </td>
+
+                                <td>
+                                    <span class="status concluido">
+                                        Concluído
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

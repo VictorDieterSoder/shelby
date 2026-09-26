@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cantina - Aluno</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/painelAluno.css"
+    >
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/usuarios.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TOPO -->
+        <header class="topo">
+
+            <div class="saldo">
+                <span>Saldo</span>
+
+                <strong id="saldoAluno">
+                    R$ 0,00
+                </strong>
+            </div>
+
+            <div class="aluno">
+                <span>Aluno</span>
+
+                <strong>
+                    João Silva
+                </strong>
+            </div>
+
+            <button class="btn-sair" type="button" onclick="sairPerfilAluno()" aria-label="Sair do perfil do aluno">
+                Sair
+            </button>
+
+        </header>
+
+
+        <!-- TÍTULO -->
+        <section class="cabecalho">
+
+            <h1>Cantina</h1>
+
+            <p>
+                Escolha os itens que deseja pedir
+            </p>
+
+        </section>
+
+
+        <!-- SALGADOS -->
+        <section class="categoria">
+
+            <h2>Salgados</h2>
+
+            <div class="produtos">
+
+
+                <!-- COXINHA -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Coxinha', 7)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Coxinha
+                        </strong>
+
+                        <span>
+                            R$ 7,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- PASTEL -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Pastel', 8)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Pastel
+                        </strong>
+
+                        <span>
+                            R$ 8,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- PÃO DE QUEIJO -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Pão de queijo', 5)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Pão de queijo
+                        </strong>
+
+                        <span>
+                            R$ 5,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- SANDUÍCHE -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Sanduíche', 10)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Sanduíche
+                        </strong>
+
+                        <span>
+                            R$ 10,00
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCES -->
+        <section class="categoria">
+
+            <h2>Doces</h2>
+
+            <div class="produtos">
+
+
+                <!-- BRIGADEIRO -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Brigadeiro', 4)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Brigadeiro
+                        </strong>
+
+                        <span>
+                            R$ 4,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- CHOCOLATE -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Chocolate', 6)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Chocolate
+                        </strong>
+
+                        <span>
+                            R$ 6,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- COOKIE -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Cookie', 5)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Cookie
+                        </strong>
+
+                        <span>
+                            R$ 5,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- BOLO -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Bolo', 7)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Bolo
+                        </strong>
+
+                        <span>
+                            R$ 7,00
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BEBIDAS -->
+        <section class="categoria">
+
+            <h2>Bebidas</h2>
+
+            <div class="produtos">
+
+
+                <!-- ÁGUA -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Água', 3)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Água
+                        </strong>
+
+                        <span>
+                            R$ 3,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- SUCO -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Suco', 6)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Suco
+                        </strong>
+
+                        <span>
+                            R$ 6,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- REFRIGERANTE -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Refrigerante', 6)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Refrigerante
+                        </strong>
+
+                        <span>
+                            R$ 6,00
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- ACHOCOLATADO -->
+                <div
+                    class="produto"
+                    onclick="adicionarItem('Achocolatado', 5)"
+                >
+
+                    <div class="icone">
+                        
+                    </div>
+
+                    <div>
+                        <strong>
+                            Achocolatado
+                        </strong>
+
+                        <span>
+                            R$ 5,00
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PEDIDO -->
+        <section class="pedido">
+
+            <div class="pedido-titulo">
+
+                <h2>
+                    Seu pedido
+                </h2>
+
+                <button
+                    class="limpar"
+                    onclick="limparPedido()"
+                >
+                    Limpar
+                </button>
+
+            </div>
+
+
+            <!-- LISTA DE ITENS -->
+            <div id="listaPedido">
+
+                <p class="pedido-vazio">
+                    Nenhum item selecionado.
+                </p>
+
+            </div>
+
+
+            <!-- TOTAL -->
+            <div class="total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="totalPedido">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <!-- BOTÃO PEDIR -->
+            <button
+                class="btn-pedir"
+                onclick="fazerPedido()"
+            >
+                Pedir
+            </button>
+
+        </section>
+
+    </main>
+
+
+
+    
+
+</body>
+
+</html>

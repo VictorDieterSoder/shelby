@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Financeiro por Aluno - Cantina</title>
+
+    <link rel="stylesheet" href="../css/financeiro-aluno.css">
+
+    <link rel="stylesheet" href="../css/conexao.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/telas.js"></script>
+</head>
+
+
+<body>
+
+
+    <div class="sistema">
+
+
+        <!-- MENU LATERAL -->
+
+        <aside class="menu">
+
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+
+                    <h2>Cantina</h2>
+
+                    <p>Gestão</p>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+
+                <a href="painel.html" class="menu-item">
+
+                    <span>▦</span>
+
+                    Painel
+
+                </a>
+
+
+                <a href="pedidos-balcao.html" class="menu-item">
+
+                    <span></span>
+
+                    Pedidos no Balcão
+
+                </a>
+
+
+                <a href="cadastro-itens.html" class="menu-item">
+
+                    <span></span>
+
+                    Cadastro de Itens
+
+                </a>
+
+
+                <a href="itens-dia.html" class="menu-item">
+
+                    <span>✓</span>
+
+                    Itens do Dia
+
+                </a>
+
+
+                <a href="pedidos-intervalo.html" class="menu-item">
+
+                    <span></span>
+
+                    Pedidos do Intervalo
+
+                </a>
+
+
+                <a href="financeiro.html" class="menu-item">
+
+                    <span></span>
+
+                    Financeiro
+
+                </a>
+
+
+                <a href="financeiro-aluno.html" class="menu-item ativo">
+
+                    <span></span>
+
+                    Financeiro por Aluno
+
+                </a>
+
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a href="index.html" class="menu-item sair">
+
+                    <span></span>
+
+                    Sair
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="topo">
+
+
+                <div>
+
+                    <p>Financeiro</p>
+
+                    <h1>Financeiro por aluno</h1>
+
+                    <span>
+                        Consulte os gastos individuais de cada aluno.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PESQUISA -->
+
+            <section class="pesquisa-card">
+
+
+                <div class="pesquisa-titulo">
+
+                    <h2>Pesquisar aluno</h2>
+
+                    <p>
+                        Digite o nome do aluno para consultar seus gastos.
+                    </p>
+
+                </div>
+
+
+                <div class="barra-pesquisa">
+
+
+                    <input
+                        type="text"
+                        placeholder="Digite o nome do aluno..."
+                    >
+
+
+                    <button>
+                         Pesquisar
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ALUNO -->
+
+            <section class="aluno-card">
+
+
+                <div class="aluno-topo">
+
+
+                    <div class="aluno-identificacao">
+
+
+                        <div class="avatar">
+                            JS
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                João da Silva
+                            </h2>
+
+                            <p>
+                                3º Ano A
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="periodo">
+
+
+                        <label>
+                            Período
+                        </label>
+
+
+                        <select>
+
+                            <option>1 dia</option>
+
+                            <option>1 semana</option>
+
+                            <option selected>
+                                1 mês
+                            </option>
+
+                            <option>
+                                3 meses
+                            </option>
+
+                            <option>
+                                6 meses
+                            </option>
+
+                            <option>
+                                1 ano
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TOTAL -->
+
+                <div class="total-gasto">
+
+
+                    <div>
+
+                        <span>
+                            Gastos no período
+                        </span>
+
+                        <strong>
+                            R$ 187,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="total-pedidos">
+
+                        <span>
+                            Pedidos
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- RESPONSÁVEL -->
+
+                <div class="responsavel">
+
+
+                    <div class="responsavel-titulo">
+
+                        <span class="responsavel-icone">
+                            
+                        </span>
+
+
+                        <div>
+
+                            <h3>
+                                Responsável
+                            </h3>
+
+                            <p>
+                                Informações para contato
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="responsavel-info">
+
+
+                        <div>
+
+                            <span>
+                                Nome
+                            </span>
+
+                            <strong>
+                                Carlos da Silva
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Telefone
+                            </span>
+
+                            <strong>
+                                (51) 99999-9999
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </section>
+
+
+
+            <!-- HISTÓRICO -->
+
+            <section class="historico">
+
+
+                <div class="historico-topo">
+
+
+                    <div>
+
+                        <h2>
+                            Histórico de gastos
+                        </h2>
+
+                        <p>
+                            Pedidos realizados pelo aluno no período selecionado.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CABEÇALHO -->
+
+                <div class="tabela-cabecalho">
+
+                    <span>
+                        Data
+                    </span>
+
+                    <span>
+                        Item
+                    </span>
+
+                    <span>
+                        Forma de pagamento
+                    </span>
+
+                    <span>
+                        Valor
+                    </span>
+
+                </div>
+
+
+
+                <!-- PEDIDO 1 -->
+
+                <div class="linha">
+
+                    <div>
+
+                        25/09/2026
+
+                        <small>
+                            09:02
+                        </small>
+
+                    </div>
+
+
+                    <strong>
+                        Cachorro-quente
+                    </strong>
+
+
+                    <span>
+                        PIX
+                    </span>
+
+
+                    <strong class="valor">
+                        R$ 8,00
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PEDIDO 2 -->
+
+                <div class="linha">
+
+                    <div>
+
+                        24/09/2026
+
+                        <small>
+                            15:32
+                        </small>
+
+                    </div>
+
+
+                    <strong>
+                        Pastel
+                    </strong>
+
+
+                    <span>
+                        Dinheiro
+                    </span>
+
+
+                    <strong class="valor">
+                        R$ 6,00
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PEDIDO 3 -->
+
+                <div class="linha">
+
+                    <div>
+
+                        23/09/2026
+
+                        <small>
+                            09:05
+                        </small>
+
+                    </div>
+
+
+                    <strong>
+                        Refrigerante
+                    </strong>
+
+
+                    <span>
+                        Cartão
+                    </span>
+
+
+                    <strong class="valor">
+                        R$ 5,00
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PEDIDO 4 -->
+
+                <div class="linha">
+
+                    <div>
+
+                        22/09/2026
+
+                        <small>
+                            15:30
+                        </small>
+
+                    </div>
+
+
+                    <strong>
+                        Sanduíche
+                    </strong>
+
+
+                    <span>
+                        PIX
+                    </span>
+
+
+                    <strong class="valor">
+                        R$ 7,00
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PEDIDO 5 -->
+
+                <div class="linha">
+
+                    <div>
+
+                        21/09/2026
+
+                        <small>
+                            09:01
+                        </small>
+
+                    </div>
+
+
+                    <strong>
+                        Suco
+                    </strong>
+
+
+                    <span>
+                        Não pago
+                    </span>
+
+
+                    <strong class="valor pendente">
+                        R$ 5,00
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</body>
+
+</html>

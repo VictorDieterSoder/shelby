@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef2f7;
+
+    color: #222;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 22px 18px 40px;
+}
+
+
+/* TOPO */
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.bem-vindo {
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.topo h1 {
+    margin-top: 3px;
+
+    font-size: 23px;
+}
+
+
+.btn-sair {
+    padding: 10px 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: white;
+
+    color: #555;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* SALDO TOTAL */
+
+.saldo-total {
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: #2563eb;
+
+    color: white;
+
+    box-shadow: 0 7px 22px rgba(37, 99, 235, 0.2);
+}
+
+
+.saldo-total span {
+    font-size: 14px;
+
+    opacity: 0.85;
+}
+
+
+.saldo-total h2 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    font-size: 32px;
+}
+
+
+.btn-saldo {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* CARD */
+
+.card {
+    margin-bottom: 18px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+.card h2 {
+    margin-bottom: 16px;
+
+    font-size: 18px;
+}
+
+
+.card label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #555;
+}
+
+
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 11px;
+
+    background: #fafafa;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+select:focus {
+    border-color: #2563eb;
+}
+
+
+/* SALDO DO ALUNO */
+
+.titulo-saldo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.titulo-saldo span {
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.titulo-saldo h2 {
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+
+
+#saldoFilho {
+    font-size: 22px;
+
+    color: #2563eb;
+}
+
+
+/* LIMITE */
+
+.limite-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding: 13px 0;
+
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+
+.limite-info span {
+    color: #666;
+}
+
+
+.acoes {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.acoes button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.acoes .btn-secundario {
+    background: white;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
+}
+
+.acoes .btn-editar-perfil {
+    grid-column: 1 / -1;
+    background: #f8fafc;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.acoes .btn-editar-perfil:hover {
+    background: #eef2f7;
+}
+
+.dialog-editar-perfil {
+    width: min(560px, calc(100% - 32px));
+    max-height: min(88vh, 800px);
+    margin: auto;
+    padding: 24px;
+    border: 0;
+    border-radius: 14px;
+    color: #222;
+    box-shadow: 0 18px 60px rgba(15, 23, 42, .24);
+}
+
+.dialog-editar-perfil::backdrop {
+    background: rgba(15, 23, 42, .52);
+}
+
+.dialog-editar-perfil form {
+    display: grid;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.dialog-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.dialog-topo h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.dialog-editar-perfil label,
+.dialog-editar-perfil legend {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+}
+
+.dialog-editar-perfil input:not([type="checkbox"]) {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    font: inherit;
+}
+
+.dialog-editar-perfil input:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+.dialog-campos-duplos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(90px, .55fr);
+    gap: 12px;
+}
+
+.dialog-campos-duplos > div {
+    display: grid;
+    gap: 8px;
+}
+
+.dialog-editar-perfil fieldset {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.alergias-perfil {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.alergias-perfil label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: normal;
+}
+
+.dialog-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dialog-acoes button,
+.dialog-fechar {
+    min-height: 42px;
+    padding: 9px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dialog-acoes .btn-cancelar,
+.dialog-fechar {
+    background: white;
+    color: #334155;
+}
+
+.dialog-acoes .btn-salvar-perfil {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.dialog-fechar {
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* EXTRATO */
+
+.titulo-extrato {
+    margin-bottom: 8px;
+}
+
+
+.titulo-extrato h2 {
+    margin-bottom: 3px;
+}
+
+
+.titulo-extrato span {
+    font-size: 13px;
+
+    color: #888;
+}
+
+
+.movimentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.movimentacao:last-child {
+    border-bottom: none;
+}
+
+
+.movimentacao div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.movimentacao div strong {
+    font-size: 14px;
+}
+
+
+.movimentacao div span {
+    font-size: 12px;
+
+    color: #888;
+}
+
+
+.entrada {
+    color: #16a34a;
+
+    white-space: nowrap;
+}
+
+
+.saida {
+    color: #dc2626;
+
+    white-space: nowrap;
+}
+
+
+.limite {
+    color: #2563eb;
+
+    white-space: nowrap;
+}
+
+
+/* TELAS MAIORES */
+
+@media (min-width: 600px) {
+
+    .container {
+        padding-top: 40px;
+    }
+
+
+    .acoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

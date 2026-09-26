@@ -1,0 +1,7 @@
+#connection-notice { position:fixed; bottom:20px; right:20px; max-width:min(420px,calc(100vw - 40px)); background:#fff; color:#166534; padding:16px; border:1px solid #bbf7d0; border-radius:6px; box-shadow:0 2px 12px #0002; z-index:100; }
+#connection-notice[data-error="true"] { color:#991b1b; border-color:#fca5a5; }
+.forma.selecionada { outline:2px solid #2563eb; }
+.empty-result { padding:20px; color:#64748b; }
+button:disabled { opacity:.6; cursor:default; }
+.conteudo { min-width:0; }
+.linha, .pedido, .item { overflow-wrap:anywhere; }

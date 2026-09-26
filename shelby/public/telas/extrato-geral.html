@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Extrato Geral - Cantina</title>
+
+    <link rel="stylesheet" href="../css/extrato.css">
+
+    <link rel="stylesheet" href="../css/conexao.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/telas.js"></script>
+</head>
+
+<body>
+
+    <div class="sistema">
+
+
+        <!-- MENU LATERAL -->
+
+        <aside class="menu">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+                    <h2>Cantina</h2>
+                    <p>Gestão</p>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="painel.html" class="menu-item">
+                    <span>▦</span>
+                    Painel
+                </a>
+
+                <a href="pedidos-balcao.html" class="menu-item">
+                    <span></span>
+                    Pedidos no Balcão
+                </a>
+
+                <a href="cadastro-itens.html" class="menu-item">
+                    <span></span>
+                    Cadastro de Itens
+                </a>
+
+                <a href="itens-dia.html" class="menu-item">
+                    <span>✓</span>
+                    Itens do Dia
+                </a>
+
+                <a href="pedidos-intervalo.html" class="menu-item">
+                    <span></span>
+                    Pedidos do Intervalo
+                </a>
+
+                <a href="financeiro.html" class="menu-item ativo">
+                    <span></span>
+                    Financeiro
+                </a>
+
+                <a href="financeiro-aluno.html" class="menu-item">
+                    <span></span>
+                    Financeiro por Aluno
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a href="index.html" class="menu-item sair">
+                    <span></span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="topo">
+
+                <div>
+
+                    <a href="financeiro.html" class="voltar">
+                        ← Voltar para financeiro
+                    </a>
+
+                    <p>Financeiro</p>
+
+                    <h1>Extrato geral</h1>
+
+                    <span>
+                        Todas as movimentações financeiras da cantina.
+                    </span>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>Período</span>
+
+                    <select>
+
+                        <option>1 dia</option>
+                        <option>1 semana</option>
+                        <option selected>1 mês</option>
+                        <option>3 meses</option>
+                        <option>6 meses</option>
+                        <option>1 ano</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESUMO -->
+
+            <div class="resumo">
+
+
+                <div class="resumo-card">
+
+                    <span class="icone">
+                        
+                    </span>
+
+                    <div>
+
+                        <p>Total do período</p>
+
+                        <strong>
+                            R$ 12.485,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resumo-card">
+
+                    <span class="icone verde">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <p>Recebido</p>
+
+                        <strong>
+                            R$ 11.820,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resumo-card">
+
+                    <span class="icone laranja">
+                        !
+                    </span>
+
+                    <div>
+
+                        <p>Em aberto</p>
+
+                        <strong>
+                            R$ 665,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXTRATO -->
+
+            <section class="card">
+
+                <div class="card-topo">
+
+                    <div>
+
+                        <h2>
+                            Movimentações
+                        </h2>
+
+                        <p>
+                            Pedidos registrados no período selecionado.
+                        </p>
+
+                    </div>
+
+
+                    <button class="exportar">
+                        ↓ Exportar
+                    </button>
+
+                </div>
+
+
+                <!-- CABEÇALHO DA TABELA -->
+
+                <div class="tabela-cabecalho">
+
+                    <span>Data</span>
+
+                    <span>Aluno</span>
+
+                    <span>Item</span>
+
+                    <span>Pagamento</span>
+
+                    <span>Valor</span>
+
+                    <span>Status</span>
+
+                </div>
+
+
+                <!-- LINHAS -->
+
+                <div class="linha">
+
+                    <div>
+                        25/09/2026
+                        <small>09:02</small>
+                    </div>
+
+                    <strong>
+                        João da Silva
+                    </strong>
+
+                    <span>
+                        Cachorro-quente
+                    </span>
+
+                    <span class="pagamento">
+                        PIX
+                    </span>
+
+                    <strong class="valor">
+                        R$ 8,00
+                    </strong>
+
+                    <span class="status pago">
+                        Pago
+                    </span>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div>
+                        25/09/2026
+                        <small>09:05</small>
+                    </div>
+
+                    <strong>
+                        Maria Silva
+                    </strong>
+
+                    <span>
+                        Pastel
+                    </span>
+
+                    <span class="pagamento">
+                        Cartão
+                    </span>
+
+                    <strong class="valor">
+                        R$ 6,00
+                    </strong>
+
+                    <span class="status pago">
+                        Pago
+                    </span>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div>
+                        25/09/2026
+                        <small>09:10</small>
+                    </div>
+
+                    <strong>
+                        Pedro Rodrigues
+                    </strong>
+
+                    <span>
+                        Refrigerante
+                    </span>
+
+                    <span class="pagamento">
+                        Não pago
+                    </span>
+
+                    <strong class="valor">
+                        R$ 5,00
+                    </strong>
+
+                    <span class="status pendente">
+                        Pendente
+                    </span>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div>
+                        24/09/2026
+                        <small>15:31</small>
+                    </div>
+
+                    <strong>
+                        Ana Costa
+                    </strong>
+
+                    <span>
+                        Sanduíche
+                    </span>
+
+                    <span class="pagamento">
+                        Dinheiro
+                    </span>
+
+                    <strong class="valor">
+                        R$ 7,00
+                    </strong>
+
+                    <span class="status pago">
+                        Pago
+                    </span>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div>
+                        24/09/2026
+                        <small>15:35</small>
+                    </div>
+
+                    <strong>
+                        Lucas Santos
+                    </strong>
+
+                    <span>
+                        Suco
+                    </span>
+
+                    <span class="pagamento">
+                        PIX
+                    </span>
+
+                    <strong class="valor">
+                        R$ 5,00
+                    </strong>
+
+                    <span class="status pago">
+                        Pago
+                    </span>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div>
+                        24/09/2026
+                        <small>15:40</small>
+                    </div>
+
+                    <strong>
+                        Gabriel Souza
+                    </strong>
+
+                    <span>
+                        Pastel
+                    </span>
+
+                    <span class="pagamento">
+                        Não pago
+                    </span>
+
+                    <strong class="valor">
+                        R$ 6,00
+                    </strong>
+
+                    <span class="status pendente">
+                        Pendente
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

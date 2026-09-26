@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Itens do Dia - Cantina</title>
+
+    <link rel="stylesheet" href="../css/itens-dia.css">
+
+    <link rel="stylesheet" href="../css/conexao.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/telas.js"></script>
+</head>
+
+<body>
+
+    <div class="sistema">
+
+
+        <!-- MENU -->
+
+        <aside class="menu">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+                    <h2>Cantina</h2>
+                    <p>Gestão</p>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="painel.html" class="menu-item">
+                    <span>▦</span>
+                    Painel
+                </a>
+
+                <a href="pedidos-balcao.html" class="menu-item">
+                    <span></span>
+                    Pedidos no Balcão
+                </a>
+
+                <a href="cadastro-itens.html" class="menu-item">
+                    <span></span>
+                    Cadastro de Itens
+                </a>
+
+                <a href="itens-dia.html" class="menu-item ativo">
+                    <span>✓</span>
+                    Itens do Dia
+                </a>
+
+                <a href="pedidos-intervalo.html" class="menu-item">
+                    <span></span>
+                    Pedidos do Intervalo
+                </a>
+
+                <a href="financeiro.html" class="menu-item">
+                    <span></span>
+                    Financeiro
+                </a>
+
+                <a href="financeiro-aluno.html" class="menu-item">
+                    <span></span>
+                    Financeiro por Aluno
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a href="index.html" class="menu-item sair">
+                    <span></span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+
+            <!-- TOPO -->
+
+            <div class="topo">
+
+                <div>
+
+                    <p>Disponibilidade</p>
+
+                    <h1>Itens do dia</h1>
+
+                    <span>
+                        Selecione os produtos disponíveis para venda hoje.
+                    </span>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>Hoje</span>
+
+                    <strong>
+                        25/09/2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- AVISO -->
+
+            <div class="aviso">
+
+                <div class="aviso-icone">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Disponibilidade de hoje
+                    </strong>
+
+                        <p>
+                            Informe o estoque do dia. Cada encomenda online ou venda no balcão reduz as unidades restantes.
+                        </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTRO -->
+
+            <div class="barra">
+
+                <div class="pesquisa">
+
+                    <span>
+                        
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Pesquisar item..."
+                    >
+
+                </div>
+
+
+                <select>
+
+                    <option>
+                        Todas as categorias
+                    </option>
+
+                    <option>
+                        Lanches
+                    </option>
+
+                    <option>
+                        Bebidas
+                    </option>
+
+                    <option>
+                        Salgados
+                    </option>
+
+                    <option>
+                        Doces
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ITENS -->
+
+            <section class="card">
+
+                <div class="card-topo">
+
+                    <div>
+
+                        <h2>
+                            Produtos cadastrados
+                        </h2>
+
+                        <p>
+                            Marque os produtos que estarão disponíveis hoje.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contador">
+
+                        <strong>
+                            5
+                        </strong>
+
+                        disponíveis hoje
+
+                    </div>
+
+                </div>
+
+
+                <div class="itens">
+
+
+                    <!-- ITEM SELECIONADO -->
+
+                    <div class="item selecionado">
+
+                        <div class="checkbox">
+                            ✓
+                        </div>
+
+
+                        <div class="item-icone">
+                            
+                        </div>
+
+
+                        <div class="item-info">
+
+                            <strong>
+                                Cachorro-quente
+                            </strong>
+
+                            <span>
+                                Lanches
+                            </span>
+
+                        </div>
+
+
+                        <div class="preco">
+                            R$ 8,00
+                        </div>
+
+
+                        <span class="status disponivel">
+                            Disponível
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM SELECIONADO -->
+
+                    <div class="item selecionado">
+
+                        <div class="checkbox">
+                            ✓
+                        </div>
+
+
+                        <div class="item-icone">
+                            
+                        </div>
+
+
+                        <div class="item-info">
+
+                            <strong>
+                                Pastel
+                            </strong>
+
+                            <span>
+                                Salgados
+                            </span>
+
+                        </div>
+
+
+                        <div class="preco">
+                            R$ 6,00
+                        </div>
+
+
+                        <span class="status disponivel">
+                            Disponível
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM SELECIONADO -->
+
+                    <div class="item selecionado">
+
+                        <div class="checkbox">
+                            ✓
+                        </div>
+
+
+                        <div class="item-icone">
+                            
+                        </div>
+
+
+                        <div class="item-info">
+
+                            <strong>
+                                Refrigerante
+                            </strong>
+
+                            <span>
+                                Bebidas
+                            </span>
+
+                        </div>
+
+
+                        <div class="preco">
+                            R$ 5,00
+                        </div>
+
+
+                        <span class="status disponivel">
+                            Disponível
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM NÃO SELECIONADO -->
+
+                    <div class="item">
+
+                        <div class="checkbox vazio">
+                        </div>
+
+
+                        <div class="item-icone">
+                            
+                        </div>
+
+
+                        <div class="item-info">
+
+                            <strong>
+                                Sanduíche
+                            </strong>
+
+                            <span>
+                                Lanches
+                            </span>
+
+                        </div>
+
+
+                        <div class="preco">
+                            R$ 9,00
+                        </div>
+
+
+                        <span class="status indisponivel">
+                            Indisponível
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM SELECIONADO -->
+
+                    <div class="item selecionado">
+
+                        <div class="checkbox">
+                            ✓
+                        </div>
+
+
+                        <div class="item-icone">
+                            
+                        </div>
+
+
+                        <div class="item-info">
+
+                            <strong>
+                                Suco
+                            </strong>
+
+                            <span>
+                                Bebidas
+                            </span>
+
+                        </div>
+
+
+                        <div class="preco">
+                            R$ 5,00
+                        </div>
+
+
+                        <span class="status disponivel">
+                            Disponível
+                        </span>
+
+                    </div>
+
+
+                    <!-- ITEM NÃO SELECIONADO -->
+
+                    <div class="item">
+
+                        <div class="checkbox vazio">
+                        </div>
+
+
+                        <div class="item-icone">
+                            
+                        </div>
+
+
+                        <div class="item-info">
+
+                            <strong>
+                                Salgado
+                            </strong>
+
+                            <span>
+                                Salgados
+                            </span>
+
+                        </div>
+
+
+                        <div class="preco">
+                            R$ 5,00
+                        </div>
+
+
+                        <span class="status indisponivel">
+                            Indisponível
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <div class="salvar-area">
+
+                    <p>
+                        4 itens selecionados para hoje
+                    </p>
+
+                    <button class="salvar">
+                        Salvar disponibilidade
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- INFORMAÇÃO PARA ALUNO -->
+
+            <section class="card aluno-preview">
+
+                <div class="preview-icone">
+                    
+                </div>
+
+                <div>
+
+                    <h3>
+                        Visualização do aluno
+                    </h3>
+
+                        <p>
+                            Somente produtos marcados e com unidades restantes aparecem no cardápio do aluno.
+                        </p>
+
+                </div>
+
+                <div class="preview-status">
+
+                    <span>
+                        ●
+                    </span>
+
+                    Atualizado hoje
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

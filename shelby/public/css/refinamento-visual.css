@@ -1,0 +1,159 @@
+:root {
+    --visual-ink: #1e293b;
+    --visual-muted: #475569;
+    --visual-line: #d8e0ea;
+    --visual-surface: #ffffff;
+    --visual-primary: #2563eb;
+    --visual-primary-hover: #1d4ed8;
+    --visual-radius-control: 6px;
+    --visual-radius-panel: 8px;
+    --visual-ease: 160ms cubic-bezier(.2, .7, .2, 1);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--visual-ink);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--visual-ink);
+    font-weight: 650;
+    line-height: 1.22;
+}
+
+p,
+small,
+.descricao,
+.subtitulo,
+.texto-auxiliar {
+    color: var(--visual-muted);
+}
+
+.menu {
+    padding: 22px 14px;
+}
+
+.menu-item > span:first-child {
+    display: none;
+}
+
+.logo-icon {
+    position: relative;
+    color: transparent;
+}
+
+.logo-icon::after {
+    content: "S";
+    color: #ffffff;
+    font: 700 1.1rem/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.menu-item {
+    min-height: 44px;
+    border-radius: var(--visual-radius-control);
+    transition: background-color var(--visual-ease), color var(--visual-ease);
+}
+
+button,
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea,
+.botao,
+.botao-login,
+.botao-cadastro,
+.botao-voltar,
+.acao,
+.forma,
+.menu-item {
+    min-height: 44px;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+input,
+select,
+textarea {
+    border-radius: var(--visual-radius-control);
+    transition: border-color var(--visual-ease), background-color var(--visual-ease), box-shadow var(--visual-ease);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    min-width: 18px;
+    min-height: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+button,
+.botao,
+.botao-login,
+.botao-cadastro,
+.botao-voltar,
+.acao,
+.forma {
+    border-radius: var(--visual-radius-control);
+    transition: color var(--visual-ease), background-color var(--visual-ease), border-color var(--visual-ease), transform var(--visual-ease);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+button:active,
+.botao:active,
+.botao-login:active,
+.botao-cadastro:active {
+    transform: translateY(1px);
+}
+
+.card,
+[class$="-card"],
+.pesquisa-card,
+.historico,
+.resumo,
+.extrato-card,
+.login-card,
+.cadastro-card {
+    border-radius: var(--visual-radius-panel);
+    box-shadow: none;
+}
+
+.icone,
+.resumo-icone,
+.item-icone,
+.icone-item,
+.preview-icone,
+.pesquisa > span:empty {
+    display: none !important;
+}
+
+table th {
+    font-weight: 650;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

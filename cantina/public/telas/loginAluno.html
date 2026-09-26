@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Aluno</title>
+
+    <link rel="stylesheet" href="../css/loginAluno.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/usuarios.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Área do Aluno</h1>
+        <p>Preencha os dados para entrar</p>
+
+        <form method="post">
+
+            <div class="campo">
+
+                <label for="usuario">
+                    Usuário
+                </label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Digite seu usuário"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="senha">
+                    Senha
+                </label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Entrar
+            </button>
+
+
+            <button
+                type="button"
+                class="btn-cadastrar"
+                onclick="window.location.href='cadastroAluno.html'"
+            >
+                Cadastrar
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

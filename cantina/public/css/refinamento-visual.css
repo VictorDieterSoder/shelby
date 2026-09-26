@@ -1,0 +1,145 @@
+:root {
+    --visual-ink: #222222;
+    --visual-muted: #4b5563;
+    --visual-line: #d7dee8;
+    --visual-focus: #2563eb;
+    --visual-radius-control: 6px;
+    --visual-radius-panel: 9px;
+    --visual-ease: 160ms cubic-bezier(.2, .7, .2, 1);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 650;
+    line-height: 1.22;
+}
+
+p,
+small,
+.muted,
+.bem-vindo,
+.saldo span,
+.aluno span,
+.cabecalho p,
+.topo p,
+.pedido-vazio,
+.vazio,
+.aviso-intervalo,
+.item-pedido div span,
+.movimentacao div span {
+    color: var(--visual-muted);
+}
+
+.container,
+.card,
+.pedido,
+.topo,
+.saldo-total,
+.produto,
+.dialog-editar-perfil {
+    border-radius: var(--visual-radius-panel);
+    box-shadow: none;
+}
+
+.icone {
+    display: none !important;
+}
+
+button,
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea,
+.produto,
+.btn-sair,
+.btn-voltar,
+.voltar,
+.btn-comprar,
+.btn-saldo,
+    .btn-editar-perfil,
+    .btn-secundario,
+    .btn-cancelar,
+    .btn-salvar-perfil {
+    min-height: 44px;
+    font-family: inherit;
+}
+
+input,
+select,
+textarea {
+    border-radius: var(--visual-radius-control);
+    transition: border-color var(--visual-ease), background-color var(--visual-ease), box-shadow var(--visual-ease);
+}
+
+button,
+.produto,
+.btn-sair,
+.btn-voltar,
+.voltar,
+.btn-comprar,
+.btn-saldo,
+.btn-editar-perfil,
+.btn-secundario,
+.btn-cancelar,
+.btn-salvar-perfil {
+    border-radius: var(--visual-radius-control);
+    transition: color var(--visual-ease), background-color var(--visual-ease), border-color var(--visual-ease), transform var(--visual-ease);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    min-width: 18px;
+    min-height: 18px;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.produto:focus-visible {
+    outline: 3px solid var(--visual-focus);
+    outline-offset: 2px;
+}
+
+button:active,
+.produto:active,
+.btn-comprar:active {
+    transform: translateY(1px);
+}
+
+.campo label,
+.campo > label {
+    color: #303846;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #687386;
+    opacity: 1;
+}
+
+.alergias label,
+.checkboxes label {
+    min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

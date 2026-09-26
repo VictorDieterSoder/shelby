@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Itens - Cantina</title>
+
+    <link rel="stylesheet" href="../css/cadastro-itens.css">
+
+    <link rel="stylesheet" href="../css/conexao.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/telas.js"></script>
+</head>
+
+<body>
+
+    <div class="sistema">
+
+
+        <!-- MENU -->
+
+        <aside class="menu">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+                    <h2>Cantina</h2>
+                    <p>Gestão</p>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="painel.html" class="menu-item">
+                    <span>▦</span>
+                    Painel
+                </a>
+
+                <a href="pedidos-balcao.html" class="menu-item">
+                    <span></span>
+                    Pedidos no Balcão
+                </a>
+
+                <a href="cadastro-itens.html" class="menu-item ativo">
+                    <span></span>
+                    Cadastro de Itens
+                </a>
+
+                <a href="itens-dia.html" class="menu-item">
+                    <span>✓</span>
+                    Itens do Dia
+                </a>
+
+                <a href="pedidos-intervalo.html" class="menu-item">
+                    <span></span>
+                    Pedidos do Intervalo
+                </a>
+
+                <a href="financeiro.html" class="menu-item">
+                    <span></span>
+                    Financeiro
+                </a>
+
+                <a href="financeiro-aluno.html" class="menu-item">
+                    <span></span>
+                    Financeiro por Aluno
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a href="index.html" class="menu-item sair">
+                    <span></span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+
+            <div class="topo">
+
+                <div>
+
+                    <p>Produtos</p>
+
+                    <h1>Cadastro de itens</h1>
+
+                    <span>
+                        Cadastre os produtos vendidos pela cantina.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CADASTRO -->
+
+            <section class="card cadastro">
+
+                <div class="titulo">
+
+                    <div class="icone">
+                        +
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Novo item
+                        </h2>
+
+                        <p>
+                            Informe os dados do produto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="formulario">
+
+
+                    <div class="campo nome">
+
+                        <label>
+                            Nome do item
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Ex: Cachorro-quente"
+                        >
+
+                    </div>
+
+
+                    <div class="campo ingredientes">
+
+                        <label>Ingredientes e alergênicos</label>
+
+                        <textarea rows="3" maxlength="2000" placeholder="Ex.: farinha de trigo (glúten), leite e ovo"></textarea>
+
+                    </div>
+
+
+                    <div class="campo categoria">
+
+                        <label>
+                            Categoria
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Selecione
+                            </option>
+
+                            <option>
+                                Lanches
+                            </option>
+
+                            <option>
+                                Bebidas
+                            </option>
+
+                            <option>
+                                Salgados
+                            </option>
+
+                            <option>
+                                Doces
+                            </option>
+
+                            <option>
+                                Outros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo preco">
+
+                        <label>
+                            Valor
+                        </label>
+
+                        <div class="valor">
+
+                            <span>
+                                R$
+                            </span>
+
+                            <input
+                                type="text"
+                                placeholder="0,00"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="botao-cadastrar">
+                        Cadastrar item
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ITENS CADASTRADOS -->
+
+            <section class="card lista">
+
+
+                <div class="lista-topo">
+
+                    <div>
+
+                        <h2>
+                            Itens cadastrados
+                        </h2>
+
+                        <p>
+                            Produtos disponíveis para venda.
+                        </p>
+
+                    </div>
+
+
+                    <div class="quantidade">
+                        6 itens
+                    </div>
+
+                </div>
+
+
+                <!-- ITEM -->
+
+                <div class="item">
+
+                    <div class="item-icone">
+                        
+                    </div>
+
+                    <div class="item-info">
+
+                        <strong>
+                            Cachorro-quente
+                        </strong>
+
+                        <span>
+                            Lanches
+                        </span>
+
+                    </div>
+
+                    <div class="item-preco">
+                        R$ 8,00
+                    </div>
+
+                    <button class="editar">
+                         Editar
+                    </button>
+
+                </div>
+
+
+                <!-- ITEM -->
+
+                <div class="item">
+
+                    <div class="item-icone">
+                        
+                    </div>
+
+                    <div class="item-info">
+
+                        <strong>
+                            Pastel
+                        </strong>
+
+                        <span>
+                            Salgados
+                        </span>
+
+                    </div>
+
+                    <div class="item-preco">
+                        R$ 6,00
+                    </div>
+
+                    <button class="editar">
+                         Editar
+                    </button>
+
+                </div>
+
+
+                <!-- ITEM -->
+
+                <div class="item">
+
+                    <div class="item-icone">
+                        
+                    </div>
+
+                    <div class="item-info">
+
+                        <strong>
+                            Sanduíche
+                        </strong>
+
+                        <span>
+                            Lanches
+                        </span>
+
+                    </div>
+
+                    <div class="item-preco">
+                        R$ 9,00
+                    </div>
+
+                    <button class="editar">
+                         Editar
+                    </button>
+
+                </div>
+
+
+                <!-- ITEM -->
+
+                <div class="item">
+
+                    <div class="item-icone">
+                        
+                    </div>
+
+                    <div class="item-info">
+
+                        <strong>
+                            Refrigerante
+                        </strong>
+
+                        <span>
+                            Bebidas
+                        </span>
+
+                    </div>
+
+                    <div class="item-preco">
+                        R$ 5,00
+                    </div>
+
+                    <button class="editar">
+                         Editar
+                    </button>
+
+                </div>
+
+
+                <!-- ITEM -->
+
+                <div class="item">
+
+                    <div class="item-icone">
+                        
+                    </div>
+
+                    <div class="item-info">
+
+                        <strong>
+                            Suco
+                        </strong>
+
+                        <span>
+                            Bebidas
+                        </span>
+
+                    </div>
+
+                    <div class="item-preco">
+                        R$ 5,00
+                    </div>
+
+                    <button class="editar">
+                         Editar
+                    </button>
+
+                </div>
+
+
+                <!-- ITEM -->
+
+                <div class="item">
+
+                    <div class="item-icone">
+                        
+                    </div>
+
+                    <div class="item-info">
+
+                        <strong>
+                            Salgado
+                        </strong>
+
+                        <span>
+                            Salgados
+                        </span>
+
+                    </div>
+
+                    <div class="item-preco">
+                        R$ 5,00
+                    </div>
+
+                    <button class="editar">
+                         Editar
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+#shelby-notice { position:fixed; z-index:20; top:16px; right:16px; max-width:min(420px,calc(100vw - 32px)); padding:12px 16px; background:#e8f4ec; color:#173c28; border:1px solid #a6cdb3; border-radius:6px; box-shadow:0 4px 16px #0002; }
+#shelby-notice[data-error="true"] { background:#fff0ed; color:#7d2115; border-color:#e7b3a9; }
+.shelby-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px; }
+.shelby-heading p { margin:0 0 5px; color:#61716c; }
+.shelby-heading h1 { margin:0; }
+.shelby-heading button,.shelby-section button,.shelby-form button { padding:10px 14px; border:0; border-radius:5px; background:#176b52; color:#fff; cursor:pointer; }
+.shelby-section { margin:0 0 20px; padding:20px; background:#fff; border:1px solid #dfe7e3; border-radius:6px; }
+.shelby-section h2 { margin:0 0 16px; font-size:1.15rem; }
+.shelby-kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:20px; }
+.shelby-kpis article { display:grid; gap:10px; min-width:0; padding:16px; background:#fff; border:1px solid #dfe7e3; border-radius:6px; }
+.shelby-kpis article span { color:#61716c; font-size:.9rem; }
+.shelby-kpis article strong { font-size:1.35rem; }
+.shelby-table-wrap { overflow:auto; }
+.shelby-table { width:100%; border-collapse:collapse; text-align:left; }
+.shelby-table th,.shelby-table td { padding:11px 10px; border-bottom:1px solid #e7ece9; vertical-align:top; }
+.shelby-table th { color:#52635d; font-size:.85rem; }
+.shelby-table select { max-width:150px; padding:7px; }
+.shelby-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:end; }
+.shelby-form label { display:grid; gap:6px; }
+.shelby-form input,.shelby-form select { width:100%; min-height:40px; padding:8px; border:1px solid #bcc9c3; border-radius:4px; }
+.shelby-form fieldset { grid-column:1/-1; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 14px; border:1px solid #dfe7e3; border-radius:5px; }
+.shelby-sale-item { display:flex!important; align-items:center; justify-content:space-between; gap:10px; }
+.shelby-sale-item input { max-width:90px; }
+@media (max-width:760px) { .shelby-kpis { grid-template-columns:repeat(2,minmax(0,1fr)); } .shelby-form { grid-template-columns:1fr; } .shelby-form fieldset { grid-template-columns:1fr; } .shelby-heading { align-items:flex-start; } }

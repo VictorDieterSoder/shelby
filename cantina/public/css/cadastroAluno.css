@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 25px 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef2f7;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+
+    background: white;
+
+    padding: 30px 22px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 8px;
+
+    font-size: 26px;
+
+    color: #222;
+}
+
+p {
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 15px;
+
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo > label {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #333;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid #ddd;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+}
+
+.campo input::placeholder {
+    color: #999;
+}
+
+
+/* ALERGIAS */
+
+.alergias {
+    padding: 12px;
+
+    border: 2px solid #ddd;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.alergias label {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.alergias input {
+    width: auto;
+
+    accent-color: #2563eb;
+}
+
+small {
+    margin-top: 7px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+
+/* VOLTAR */
+
+.btn-voltar {
+    background: white;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
+}
+
+.btn-voltar:hover {
+    background: #eff6ff;
+}
+
+
+/* ERRO DA SENHA */
+
+#erroSenha {
+    margin-top: 6px;
+
+    color: #dc2626;
+
+    font-size: 13px;
+}
+
+.campo input.erro {
+    border-color: #dc2626;
+}

@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef2f7;
+
+    color: #222;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 20px 16px 40px;
+}
+
+
+/* TOPO */
+
+.topo {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.topo h1 {
+    font-size: 23px;
+
+    margin-bottom: 4px;
+}
+
+
+.topo p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.voltar {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.07);
+}
+
+
+/* CARDS */
+
+.card {
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.card h2 {
+    font-size: 18px;
+
+    margin-bottom: 17px;
+}
+
+
+/* ITENS */
+
+.item-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.item-pedido:last-child {
+    border-bottom: none;
+}
+
+
+.item-pedido div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.item-pedido div strong {
+    font-size: 15px;
+}
+
+
+.item-pedido div span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.item-pedido > strong {
+    color: #2563eb;
+
+    white-space: nowrap;
+}
+
+
+.vazio {
+    padding: 20px;
+
+    text-align: center;
+
+    color: #999;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 17px;
+}
+
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+
+.campo label {
+    margin-bottom: 8px;
+
+    color: #333;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+}
+
+
+/* DATA */
+
+.data-retirada {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+}
+
+
+/* VALORES */
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 11px 0;
+}
+
+
+.linha span {
+    color: #666;
+}
+
+
+.saldo {
+    color: #16a34a;
+}
+
+
+.total {
+    margin-top: 5px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #eee;
+
+    font-size: 18px;
+}
+
+
+.total strong {
+    color: #2563eb;
+
+    font-size: 21px;
+}
+
+
+.saldo-restante {
+    font-size: 14px;
+}
+
+
+/* BOTÃO COMPRAR */
+
+.btn-comprar {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-comprar:hover {
+    background: #1d4ed8;
+}
+
+
+/* TELAS MAIORES */
+
+@media (min-width: 600px) {
+
+    .container {
+        padding-top: 35px;
+    }
+
+}
+
+.aviso-intervalo {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.btn-comprar:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}

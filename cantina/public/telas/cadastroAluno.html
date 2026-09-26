@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro do Aluno</title>
+
+    <link rel="stylesheet" href="../css/cadastroAluno.css">
+    <link rel="stylesheet" href="../css/refinamento-visual.css">
+    <script defer src="../js/usuarios.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Cadastro do Aluno</h1>
+        <p>Preencha seus dados para criar uma conta</p>
+
+        <form id="formCadastro" method="post">
+
+            <!-- Usuário -->
+            <div class="campo">
+                <label for="usuario">Usuário</label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Digite seu usuário"
+                    required
+                >
+            </div>
+
+
+            <!-- Senha -->
+            <div class="campo">
+                <label for="senha">Senha</label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+
+
+            <!-- Confirmação de senha -->
+            <div class="campo">
+                <label for="confirmarSenha">Confirme sua senha</label>
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    name="confirmarSenha"
+                    placeholder="Digite a senha novamente"
+                    required
+                >
+
+                <span id="erroSenha"></span>
+            </div>
+
+
+            <!-- E-mail -->
+            <div class="campo">
+                <label for="email">E-mail</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                    required
+                >
+            </div>
+
+
+            <!-- Turma -->
+            <div class="campo">
+                <label for="turma">Turma</label>
+
+                <input
+                    type="text"
+                    id="turma"
+                    name="turma"
+                    placeholder="Ex: 1º A"
+                    required
+                >
+            </div>
+
+
+            <!-- Idade -->
+            <div class="campo">
+                <label for="idade">Idade</label>
+
+                <select id="idade" name="idade" required>
+                    <option value="" disabled selected>Selecione sua idade</option>
+                    <option value="11">11 anos</option>
+                    <option value="12">12 anos</option>
+                    <option value="13">13 anos</option>
+                    <option value="14">14 anos</option>
+                    <option value="15">15 anos</option>
+                    <option value="16">16 anos</option>
+                    <option value="17">17 anos</option>
+                    <option value="18">18 anos</option>
+                </select>
+            </div>
+
+
+            <!-- Alergias -->
+<div class="campo">
+    <label>Alergias</label>
+
+    <div class="alergias">
+
+        <label>
+            <input type="checkbox" name="alergias" value="nenhuma">
+            Nenhuma
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="gluten">
+            Glúten
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="lactose">
+            Lactose
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="leite">
+            Proteína do leite
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="ovo">
+            Ovo
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="soja">
+            Soja
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="amendoim">
+            Amendoim
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="castanhas">
+            Castanhas
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="peixe">
+            Peixes
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="frutosDoMar">
+            Frutos do mar
+        </label>
+
+        <label>
+            <input type="checkbox" name="alergias" value="corantes">
+            Corantes
+        </label>
+
+    </div>
+
+    <small>Você pode selecionar mais de uma opção.</small>
+</div>
+
+
+            <!-- Nome responsável -->
+            <div class="campo">
+                <label for="responsavel">Nome do responsável</label>
+
+                <input
+                    type="text"
+                    id="responsavel"
+                    name="responsavel"
+                    placeholder="Digite o nome do responsável"
+                    required
+                >
+            </div>
+
+
+            <!-- Telefone responsável -->
+            <div class="campo">
+                <label for="telefone">Telefone do responsável</label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(51) 99999-9999"
+                    required
+                >
+            </div>
+
+
+            <button type="submit">
+                Cadastrar
+            </button>
+
+            <button
+                type="button"
+                class="btn-voltar"
+                onclick="window.location.href='loginAluno.html'"
+            >
+                Voltar
+            </button>
+
+        </form>
+
+    </main>
+
+
+    
+
+</body>
+</html>

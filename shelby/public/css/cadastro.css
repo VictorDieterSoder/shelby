@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f1f5f9;
+
+    color: #1e293b;
+}
+
+
+.cadastro-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.cadastro-card {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: white;
+
+    padding: 35px 25px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.logo {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border-radius: 15px;
+
+    font-size: 28px;
+}
+
+
+.logo h1 {
+    font-size: 28px;
+
+    margin-bottom: 6px;
+}
+
+
+.logo p {
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+.campo {
+    margin-bottom: 18px;
+}
+
+
+.campo label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.campo input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background-color: white;
+}
+
+
+.campo input:focus {
+    border-color: #2563eb;
+}
+
+
+.campo input::placeholder {
+    color: #94a3b8;
+}
+
+
+.botao-cadastro {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.botao-cadastro:hover {
+    background-color: #1d4ed8;
+}
+
+
+.voltar {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+.voltar a {
+    color: #2563eb;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.voltar a:hover {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 768px) {
+
+    .cadastro-card {
+        padding: 40px;
+    }
+
+}
