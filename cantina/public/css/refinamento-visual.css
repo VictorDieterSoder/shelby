@@ -143,3 +143,368 @@ button:active,
         animation-iteration-count: 1 !important;
     }
 }
+
+/* Shared visual system for the student and family portal. */
+:root {
+    --visual-ink: #1f2937;
+    --visual-muted: #526174;
+    --visual-line: #d9e1eb;
+    --visual-surface: #ffffff;
+    --visual-page: #f4f6fa;
+    --visual-primary: #2563eb;
+    --visual-primary-hover: #1d4ed8;
+    --visual-primary-soft: #eff6ff;
+    --visual-focus: #1d4ed8;
+    --visual-radius-control: 6px;
+    --visual-radius-panel: 8px;
+    --visual-ease: 170ms cubic-bezier(.2, .7, .2, 1);
+    color: var(--visual-ink);
+    font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--visual-page);
+    color: var(--visual-ink);
+    font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--visual-ink);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: 650;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 650;
+}
+
+p,
+small,
+.bem-vindo,
+.cabecalho p,
+.pedido-vazio,
+.vazio,
+.aviso-intervalo,
+.item-pedido div span,
+.movimentacao div span {
+    color: var(--visual-muted);
+}
+
+.container {
+    padding-top: 24px;
+    padding-bottom: 48px;
+}
+
+.login-container {
+    padding: 28px 20px;
+}
+
+.login-card,
+.cadastro-card,
+.container > form,
+.card,
+.topo,
+.saldo-total,
+.pedido,
+.dialog-editar-perfil,
+.aluno-card {
+    background: var(--visual-surface);
+    border: 1px solid var(--visual-line);
+    border-radius: var(--visual-radius-panel);
+    box-shadow: 0 1px 2px rgba(24, 39, 75, .05);
+}
+
+.login-card,
+.cadastro-card,
+.container > form {
+    padding: 30px;
+}
+
+.logo-icon {
+    border-radius: 8px;
+}
+
+.topo {
+    gap: 18px;
+    padding: 18px 20px;
+}
+
+.saldo-total {
+    border-color: var(--visual-primary);
+    background: var(--visual-primary);
+    box-shadow: none;
+}
+
+.saldo-total h2,
+.saldo-total strong {
+    color: #ffffff;
+}
+
+.saldo-total .muted,
+.saldo-total span {
+    color: #e8efff;
+}
+
+.saldo-total .btn-saldo {
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: var(--visual-primary);
+}
+
+.saldo-total .btn-saldo:hover {
+    background: #eff4ff;
+}
+
+.saldo strong,
+#saldoFilho,
+.produto span {
+    color: var(--visual-primary);
+}
+
+.card,
+.pedido,
+.aluno-card {
+    padding: 20px;
+}
+
+.dialog-editar-perfil {
+    padding: 22px;
+}
+
+.dialog-topo,
+.titulo-extrato,
+.pedido-titulo {
+    border-bottom: 1px solid var(--visual-line);
+}
+
+.produto {
+    min-height: 92px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid var(--visual-line);
+    border-radius: var(--visual-radius-panel);
+    background: var(--visual-surface);
+    box-shadow: none;
+    color: var(--visual-ink);
+    text-align: left;
+}
+
+.produto:hover {
+    transform: translateY(-1px);
+    border-color: #9bb8ee;
+    background: var(--visual-primary-soft);
+}
+
+.produto:active {
+    transform: translateY(0);
+}
+
+.produto div:last-child {
+    text-align: left;
+}
+
+.produto strong {
+    color: var(--visual-ink);
+    font-size: 15px;
+}
+
+.pedido-vazio,
+.empty-result {
+    padding: 18px;
+    border: 1px dashed #b8c5d6;
+    border-radius: var(--visual-radius-control);
+    background: #f8fafc;
+}
+
+button,
+.btn-sair,
+.btn-voltar,
+.voltar,
+.btn-pedir,
+.btn-comprar,
+.btn-saldo,
+.btn-editar-perfil,
+.btn-secundario,
+.btn-cancelar,
+.btn-salvar-perfil,
+.limpar,
+.container > button {
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: var(--visual-radius-control);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    transition: color var(--visual-ease), background-color var(--visual-ease), border-color var(--visual-ease), box-shadow var(--visual-ease), transform var(--visual-ease);
+}
+
+button[type="submit"],
+.btn-pedir,
+.btn-comprar,
+.btn-saldo,
+.btn-salvar-perfil,
+.container > button {
+    background: var(--visual-primary);
+    color: #ffffff;
+}
+
+button[type="submit"]:not(:disabled):hover,
+.container > button:not(:disabled):hover,
+.btn-pedir:hover,
+.btn-comprar:hover,
+.btn-saldo:hover,
+.btn-salvar-perfil:hover {
+    background: var(--visual-primary-hover);
+}
+
+.btn-sair,
+.btn-voltar,
+.voltar,
+.btn-secundario,
+.btn-cancelar,
+.limpar,
+.btn-editar-perfil {
+    border: 1px solid var(--visual-line);
+    background: #ffffff;
+    color: #344054;
+}
+
+.btn-sair:hover,
+.btn-voltar:hover,
+.voltar:hover,
+.btn-secundario:hover,
+.btn-cancelar:hover,
+.limpar:hover,
+.btn-editar-perfil:hover {
+    border-color: #aab8cb;
+    background: #f7f9fc;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    min-height: 44px;
+    border: 1px solid #b9c5d4;
+    border-radius: var(--visual-radius-control);
+    background: #ffffff;
+    color: var(--visual-ink);
+    font: inherit;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+    padding: 10px 12px;
+}
+
+textarea {
+    padding: 11px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #66758a;
+    opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--visual-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .14);
+}
+
+.campo label,
+.campo > label,
+.card label {
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.opcao {
+    min-height: 56px;
+    border: 1px solid var(--visual-line);
+    border-radius: var(--visual-radius-panel);
+    background: #ffffff;
+    transition: border-color var(--visual-ease), background-color var(--visual-ease);
+}
+
+.opcao:hover,
+.opcao:has(input:checked) {
+    border-color: #8eade8;
+    background: var(--visual-primary-soft);
+}
+
+.opcao input,
+.lembrar input,
+.alergias input,
+.checkboxes input {
+    accent-color: var(--visual-primary);
+}
+
+.limite-info,
+.movimentacao,
+.entrada,
+.saida,
+.valores,
+.linha {
+    border-color: var(--visual-line);
+}
+
+.dialog-acoes {
+    gap: 10px;
+}
+
+.alergias label,
+.checkboxes label,
+.lembrar {
+    min-height: 44px;
+}
+
+.status,
+.badge {
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 16px 14px 32px;
+    }
+
+    .login-container {
+        padding: 18px 14px;
+    }
+
+    .login-card,
+    .cadastro-card,
+    .container > form {
+        padding: 22px 18px;
+    }
+
+    .topo {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .produto {
+        min-height: 76px;
+    }
+}
+

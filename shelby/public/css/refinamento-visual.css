@@ -157,3 +157,463 @@ table th {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* Shared visual system for the cantina management workspace. */
+:root {
+    --visual-ink: #1f2937;
+    --visual-muted: #526174;
+    --visual-line: #d9e1eb;
+    --visual-surface: #ffffff;
+    --visual-page: #f4f6fa;
+    --visual-primary: #2563eb;
+    --visual-primary-hover: #1d4ed8;
+    --visual-primary-soft: #eff6ff;
+    --visual-focus: #1d4ed8;
+    --visual-radius-control: 6px;
+    --visual-radius-panel: 8px;
+    --visual-ease: 170ms cubic-bezier(.2, .7, .2, 1);
+    color: var(--visual-ink);
+    font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--visual-page);
+    color: var(--visual-ink);
+    font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--visual-ink);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 650;
+}
+
+h3,
+h4 {
+    font-weight: 650;
+}
+
+p,
+small,
+.descricao,
+.subtitulo,
+.texto-auxiliar,
+.topo p {
+    color: var(--visual-muted);
+}
+
+.sistema {
+    min-height: 100vh;
+    background: var(--visual-page);
+}
+
+.menu {
+    width: 248px;
+    padding: 24px 14px 16px;
+    border-right: 1px solid var(--visual-line);
+    background: var(--visual-surface);
+    box-shadow: none;
+}
+
+.logo {
+    gap: 11px;
+    margin-bottom: 28px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--visual-primary);
+}
+
+.logo h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+nav {
+    gap: 4px;
+}
+
+.menu-item {
+    min-height: 44px;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color var(--visual-ease), background-color var(--visual-ease), border-color var(--visual-ease);
+}
+
+.menu-item:hover {
+    background: #f5f8fd;
+    color: var(--visual-primary-hover);
+}
+
+.menu-item.ativo {
+    border-color: #d8e5fb;
+    background: var(--visual-primary-soft);
+    box-shadow: inset 3px 0 0 var(--visual-primary);
+    color: #1749a8;
+}
+
+.menu-final {
+    border-color: var(--visual-line);
+}
+
+.menu-item.sair:hover,
+.sair:hover {
+    background: #fff5f4;
+    color: #a12b2b;
+}
+
+.conteudo {
+    min-width: 0;
+    padding: 30px 34px 42px;
+}
+
+.topo,
+.cabecalho {
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.topo h1,
+.cabecalho h1 {
+    margin-bottom: 4px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    margin-bottom: 5px;
+    color: #315da8;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.descricao,
+.topo p {
+    font-size: 14px;
+}
+
+.card,
+[class$="-card"],
+.pesquisa-card,
+.historico,
+.resumo,
+.extrato-card,
+.login-card,
+.cadastro-card {
+    border: 1px solid var(--visual-line);
+    border-radius: var(--visual-radius-panel);
+    background: var(--visual-surface);
+    box-shadow: 0 1px 2px rgba(24, 39, 75, .05);
+}
+
+.indicador,
+.grafico-card,
+.resumo-card,
+.pedidos,
+.pesquisa-card,
+.aluno-card,
+.historico,
+.financeiro-card,
+.card,
+.pedido-card,
+.resumo-card {
+    padding: 20px;
+}
+
+.indicadores,
+.graficos,
+.resumo,
+.extratos {
+    gap: 16px;
+}
+
+.indicador-topo,
+.card-cabecalho,
+.card-topo,
+.historico-topo,
+.lista-topo {
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.periodo,
+.data select,
+.data input,
+.barra-pesquisa input,
+.pesquisa input,
+.campo input,
+.campo select,
+.campo textarea,
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    min-height: 44px;
+    border: 1px solid #b9c5d4;
+    border-radius: var(--visual-radius-control);
+    background: #ffffff;
+    color: var(--visual-ink);
+    font: inherit;
+}
+
+.periodo,
+.data select,
+.data input,
+.barra-pesquisa input,
+.pesquisa input,
+.campo input,
+.campo select,
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+    padding: 10px 12px;
+}
+
+.campo textarea,
+textarea {
+    padding: 11px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #66758a;
+    opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.periodo:focus,
+.data select:focus,
+.data input:focus {
+    border-color: var(--visual-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .14);
+}
+
+label,
+.campo label {
+    color: #344054;
+    font-weight: 600;
+}
+
+button,
+.botao,
+.botao-login,
+.botao-cadastro,
+.botao-voltar,
+.voltar,
+.exportar,
+.registrar,
+.salvar,
+.entregar,
+.editar,
+.ver-tudo,
+.barra-pesquisa button,
+.pesquisa button,
+.filtro,
+.forma {
+    min-height: 44px;
+    border-radius: var(--visual-radius-control);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    transition: color var(--visual-ease), background-color var(--visual-ease), border-color var(--visual-ease), box-shadow var(--visual-ease), transform var(--visual-ease);
+}
+
+button:disabled,
+.desativado {
+    cursor: not-allowed;
+}
+
+.menu-item,
+.logo,
+.tabela-container,
+.linha,
+.pedido,
+.item,
+.aluno-card,
+.pedido-card {
+    min-width: 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    background: #f5f7fa;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+th,
+td {
+    border-bottom: 1px solid #e7ecf2;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+.status,
+.quantidade,
+.contador,
+.badge {
+    border-radius: 4px;
+    font-weight: 650;
+}
+
+.pesquisa,
+.filtros,
+.acoes,
+.formas,
+.data-hora {
+    gap: 8px;
+}
+
+.filtro {
+    border: 1px solid var(--visual-line);
+    background: #ffffff;
+    color: #475569;
+}
+
+.filtro:hover {
+    border-color: #aebdd0;
+    background: #f6f8fb;
+}
+
+.filtro.ativo {
+    border-color: #b7ccef;
+    background: var(--visual-primary-soft);
+    color: #1749a8;
+}
+
+.item,
+.pedido,
+.linha,
+.movimento,
+.linha-item,
+.ultimo,
+.resumo-item {
+    border-color: #e5eaf1;
+}
+
+.item:hover,
+.pedido:hover {
+    background: #fafcff;
+}
+
+.item.selecionado {
+    border-color: #9eb8e9;
+    background: var(--visual-primary-soft);
+}
+
+.aluno-preview,
+.aviso,
+#connection-notice {
+    border-radius: var(--visual-radius-panel);
+}
+
+#connection-notice {
+    box-shadow: 0 4px 12px rgba(24, 39, 75, .10);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.menu-item:focus-visible,
+.item:focus-visible,
+.forma:focus-visible,
+.filtro:focus-visible {
+    outline: 3px solid var(--visual-focus);
+    outline-offset: 2px;
+}
+
+button:active,
+.botao:active,
+.botao-login:active,
+.botao-cadastro:active,
+.registrar:active,
+.entregar:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 14px;
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    .menu-item {
+        min-height: 44px;
+        padding: 10px;
+    }
+
+    .conteudo {
+        padding: 22px 18px 34px;
+    }
+
+    .card,
+    .indicador,
+    .grafico-card,
+    .resumo-card,
+    .pedidos,
+    .pesquisa-card,
+    .aluno-card,
+    .historico,
+    .financeiro-card,
+    .pedido-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteudo {
+        padding: 18px 14px 28px;
+    }
+
+    .topo h1,
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+    .card-cabecalho,
+    .card-topo,
+    .historico-topo {
+        flex-wrap: wrap;
+    }
+}
+

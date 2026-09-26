@@ -475,6 +475,22 @@ select:focus {
     white-space: nowrap;
 }
 
+.saldo-aviso {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border: 1px solid #e8c875;
+    border-left: 4px solid #9a6500;
+    border-radius: 7px;
+    background: #fff8e5;
+    color: #624400;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.saldo-aviso[hidden] {
+    display: none;
+}
+
 
 /* TELAS MAIORES */
 
@@ -490,3 +506,11 @@ select:focus {
     }
 
 }
+
+@media (max-width: 420px) {
+    .saldo-aviso {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+}
+

@@ -3,6 +3,7 @@
   const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
   const page=location.pathname.split('/').pop()||'index.html';
   const prefix=location.pathname.includes('/telas/')?'../':'';
+  const lowBalanceThresholdCents=2000;
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
   let csrf='',user,panel,catalog=[],cart={},busy=false,cartKey='',operationKey='';
@@ -68,6 +69,11 @@
     const student=panel.alunos.find(a=>String(a.id_aluno)===$('#filho').value);
     $('#nomeAluno').textContent=student?.nome||'Nenhum aluno vinculado';$('#saldoFilho').textContent=money(student?.saldo);$('#limiteFilho').textContent=student?.limite_gasto==null?'Sem limite':money(student.limite_gasto);
     $$('.acoes button').forEach(b=>b.disabled=!student);
+    const lowBalanceNotice=$('#saldoBaixoAviso');
+    const balance=Number(student?.saldo??0);
+    const isLowBalance=Boolean(student)&&Number.isFinite(balance)&&Math.round(balance*100)<=lowBalanceThresholdCents;
+    lowBalanceNotice.hidden=!isLowBalance;
+    lowBalanceNotice.textContent=isLowBalance?`Atenção: o saldo de ${student.nome} está baixo. Ainda restam ${money(balance)}.`:'';
     if(!student){$('#listaExtrato').textContent='Nenhuma movimentação.';return;}
     const ledger=await api('extrato&id_aluno='+encodeURIComponent(student.id_aluno));
     $('#listaExtrato').innerHTML=ledger.movimentacoes.map(m=>`<div class="movimentacao"><div><strong>${esc(m.descricao)}</strong><span>${esc(student.nome)} • ${esc(m.criado_em)}</span></div><strong class="${Number(m.sentido)>0?'entrada':'saida'}">${Number(m.sentido)>0?'+':'−'} ${money(m.valor)}</strong></div>`).join('')||'<p>Nenhuma movimentação.</p>';
@@ -152,3 +158,4 @@
   }
   init().catch(e=>alert(e.message));
 })();
+
